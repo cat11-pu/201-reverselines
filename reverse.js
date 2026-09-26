@@ -1,4 +1,7 @@
-// reverse.js：取一行（基线：不处理）
+// reverse.js：取一行（下标从零数，越界给空串）
 export function lineAt(lines, spot) {
-  return "";
+  if (spot < 0 || spot >= lines.length) {
+    return "";
+  }
+  return lines[spot];
 }
